@@ -1,0 +1,45 @@
+body {
+	margin: 0;
+	font-family: arial;
+}
+
+#header {
+	background-color: orange;
+	height: 8%;
+}
+
+#bus-stop-list {
+	
+}
+
+.bus-stop {
+	padding: 5%;
+	margin: 2%;
+	box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.bus-stop-name {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.bus-direction {
+	margin: 2% 0 4%;
+}
+
+.bus-direction-name {
+	
+}
+
+.bus-line {
+	margin: 2% 0;
+}
+
+.bus-line-name {
+	border: 1px black solid;
+	padding: 2px;
+}
+
+.bus-line-time {
+	padding: 2px;
+}
