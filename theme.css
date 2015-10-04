@@ -8,6 +8,12 @@ body {
 	height: 8%;
 }
 
+#agency-name {
+	color: white;
+	font-size: 7vh;
+	margin-left: 1.5vw;
+}
+
 #bus-stop-list {
 	
 }

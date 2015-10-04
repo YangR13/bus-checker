@@ -14,21 +14,13 @@
 			"route_id": "1",
 			"route_color": "blue",
 			"trip_headsign": "Marketplace",
-			"arrival_times": [
-				{"time":"10:00AM"},
-				{"time":"11:00AM"},
-				{"time":"12:00AM"}
-			]
+			"arrival_times": ["10:00AM", "11:00AM", "12:00AM"]
 			},{
 			"route_short_name": "11",
 			"route_id": "2",
 			"route_color": "red",
 			"trip_headsign": "Marketplace",
-			"arrival_times": [
-				{"time":"10:00AM"},
-				{"time":"11:00AM"},
-				{"time":"12:00AM"}
-			]
+			"arrival_times": ["10:00AM", "11:00AM", "12:00AM"]
 			}
 		]
 		},{
@@ -40,21 +32,13 @@
 			"route_id": "1",
 			"route_color": "blue",
 			"trip_headsign": "Marketplace",
-			"arrival_times": [
-				{"time":"10:00AM"},
-				{"time":"11:00AM"},
-				{"time":"12:00AM"}
-			]
+			"arrival_times": ["10:00AM", "11:00AM", "12:00AM"]
 			},{
 			"route_short_name": "11",
 			"route_id": "2",
 			"route_color": "red",
 			"trip_headsign": "Marketplace",
-			"arrival_times": [
-				{"time":"10:00AM"},
-				{"time":"11:00AM"},
-				{"time":"12:00AM"}
-			]
+			"arrival_times": ["10:00AM", "11:00AM", "12:00AM"]
 			}
 		]
 		}
@@ -72,17 +56,13 @@
 			"route_id": "1",
 			"route_color": "blue",
 			"trip_headsign": "Marketplace",
-			"arrival_times": [
-				{"time":"10:00"},
-				{"time":"11:00"},
-				{"time":"12:00"}
-			]
+			"arrival_times": ["10:00AM", "11:00AM", "12:00AM"]
 			},{
 			"route_short_name": "11",
 			"route_id": "2",
 			"route_color": "red",
 			"trip_headsign": "Marketplace",
-			"arrival_times": ["10:00", "11:00", "12:00"]
+			"arrival_times": ["10:00AM", "11:00AM", "12:00AM"]
 			}
 		]
 		},{
@@ -94,17 +74,13 @@
 			"route_id": "1",
 			"route_color": "blue",
 			"trip_headsign": "Marketplace",
-			"arrival_times": [
-				{"time":"10:00"},
-				{"time":"11:00"},
-				{"time":"12:00"}
-			]
+			"arrival_times": ["10:00AM", "11:00AM", "12:00AM"]
 			},{
 			"route_short_name": "11",
 			"route_id": "2",
 			"route_color": "red",
 			"trip_headsign": "Marketplace",
-			"arrival_times": ["10:00", "11:00", "12:00"]
+			"arrival_times": ["10:00AM", "11:00AM", "12:00AM"]
 			}
 		]
 		}
