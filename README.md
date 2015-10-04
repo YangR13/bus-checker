@@ -1,2 +1,2 @@
 # bus-checker
-SDHacks '15 Project
+SD Hacks '15 Project
