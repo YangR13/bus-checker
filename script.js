@@ -1,3 +1,34 @@
+window.onload = function() {
+	getLocation();
+}
+
+function getLocation() {
+	if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(requestData);
+    } else {
+        // show error message?
+    }
+}
+
+function requestData(position) {
+	var latitude = position.coords.latitude;
+	var longitude = position.coords.longitude;
+	
+	var date = new Date();
+	var hours = date.getHours().toString();
+	var minutes = date.getMinutes().toString();
+	
+	var time = hours + ':' + minutes;
+	
+	// send request to server for data;
+	
+	console.log(latitude);
+	console.log(longitude);
+	console.log(time);
+	
+	loadDataTest();
+}
+
 function loadData(jsonData) {
 	addAgencyName(jsonData.agency_name);
 	for(var i=0; i<jsonData.stops.length; i++) {
