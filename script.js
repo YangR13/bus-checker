@@ -14,14 +14,14 @@ function addBusStop(stopData) {
 	var busStopList = document.getElementById("bus-stop-list");
 	var busStop = document.createElement("DIV");
 	busStop.className = "bus-stop";
-	busStop.innerHTML = '<span class="bus-stop-name">'+stopData.stop_name+'</span><div class="bus-direction"><span class="bus-direction-name">'+stopData.directions[0].direction_name+'</span></div><div class="bus-direction"><span class="bus-direction-name">'+stopData.directions[1].direction_name+'</span></div>';
+	busStop.innerHTML = '<span class="bus-stop-name">'+stopData.stop_name+'</span><span class="bus-stop-distance"> ('+stopData.stop_distance+' mi)</span><div class="bus-direction"><span class="bus-direction-name">'+stopData.directions[0].direction_name+'</span></div><div class="bus-direction"><span class="bus-direction-name">'+stopData.directions[1].direction_name+'</span></div>';
 	
 	for(var dir=0; dir<2; dir++) {
 			
 		for(var i=0; i<stopData.directions[dir].routes.length; i++) {
 			var route = stopData.directions[dir].routes[i];
 		
-			var busDirection = busStop.childNodes[dir+1];
+			var busDirection = busStop.childNodes[dir+2];
 			var busLine = document.createElement("DIV");
 			busLine.className = "bus-line";
 			busLine.innerHTML = '<span class="bus-line-name" style="background-color:'+route.route_color+'">'+route.route_short_name+'</span><span class="bus-line-time">'+route.arrival_times[0].time+'</span><span class="bus-line-time">'+route.arrival_times[1].time+'</span><span class="bus-line-time">'+route.arrival_times[2].time+'</span>';

@@ -23,12 +23,16 @@ body {
 	font-weight: bold;
 }
 
+.bus-stop-distance {
+	font-size: 20px;
+}
+
 .bus-direction {
 	margin: 2% 0 4%;
 }
 
 .bus-direction-name {
-	
+	text-decoration: underline;
 }
 
 .bus-line {
