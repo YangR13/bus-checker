@@ -1,6 +1,8 @@
 var socket = io();
-socket.on('place and time', function(msg){
-	console.log(msg);
+var room = 'asdf';
+
+socket.on('data package', function(msg){
+	console.log("incoming data!");
 	loadData(JSON.parse(msg));
 });
 
@@ -26,8 +28,8 @@ function requestData(position) {
 	minutes = (minutes < 10 ? '0': '')+minutes.toString();
 	
 	var time = hours + ':' + minutes;
-	
-	socket.emit('place and time', latitude+','+longitude+','+time);
+
+	socket.emit('data request', latitude+','+longitude+','+time);
 }
 
 function loadData(jsonData) {
@@ -62,16 +64,4 @@ function addBusStop(stopData) {
 		}
 	}
 	busStopList.appendChild(busStop);
-}
-
-function addBusStopTest() {
-	var text = '{"stop_name": "UCSB Bus Loop","stop_distance": "10","directions": [{"direction_id": "0","direction_name": "North","routes": [{"route_short_name": "24x","route_id": "1","route_color": "blue","trip_headsign": "Marketplace","arrival_times": [{"time":"10:00AM"},{"time":"11:00AM"},{"time":"12:00AM"}]},{"route_short_name": "11","route_id": "2","route_color": "red","trip_headsign": "Marketplace","arrival_times": [{"time":"10:00AM"},{"time":"11:00AM"},{"time":"12:00AM"}]}]},{"direction_id": "1","direction_name": "South","routes": [{"route_short_name": "24x","route_id": "1","route_color": "blue","trip_headsign": "Marketplace","arrival_times": [{"time":"10:00AM"},{"time":"11:00AM"},{"time":"12:00AM"}]},{"route_short_name": "11","route_id": "2","route_color": "red","trip_headsign": "Marketplace","arrival_times": [{"time":"10:00AM"},{"time":"11:00AM"},{"time":"12:00AM"}]}]}]}';
-	var stopData = JSON.parse(text);
-	addBusStop(stopData);
-}
-
-function loadDataTest() {
-	var text = '{"agency_name":"MTD", "stops": [{"stop_name": "UCSB Bus Loop","stop_distance": "10","directions": [{"direction_id": "0","direction_name": "North","routes": [{"route_short_name": "24x","route_id": "1","route_color": "blue","trip_headsign": "Marketplace","arrival_times": ["10:00AM", "11:00AM", "12:00AM"]},{"route_short_name": "11","route_id": "2","route_color": "red","trip_headsign": "Marketplace","arrival_times": ["10:00AM", "11:00AM", "12:00AM"]}]},{"direction_id": "1","direction_name": "South","routes": [{"route_short_name": "24x","route_id": "1","route_color": "blue","trip_headsign": "Marketplace","arrival_times": ["10:00AM", "11:00AM", "12:00AM"]},{"route_short_name": "11","route_id": "2","route_color": "red","trip_headsign": "Marketplace","arrival_times": ["10:00AM", "11:00AM", "12:00AM"]}]}]},{"stop_name": "Sierra Madre","stop_distance": "2000","directions": [{"direction_id": "0","direction_name": "North","routes": [{"route_short_name": "24x","route_id": "1","route_color": "blue","trip_headsign": "Marketplace","arrival_times": ["10:00AM", "11:00AM", "12:00AM"]},{"route_short_name": "11","route_id": "2","route_color": "red","trip_headsign": "Marketplace","arrival_times": ["10:00AM", "11:00AM", "12:00AM"]}]},{"direction_id": "1","direction_name": "South","routes": [{"route_short_name": "24x","route_id": "1","route_color": "blue","trip_headsign": "Marketplace","arrival_times": ["10:00AM", "11:00AM", "12:00AM"]},{"route_short_name": "11","route_id": "2","route_color": "red","trip_headsign": "Marketplace","arrival_times": ["10:00AM", "11:00AM", "12:00AM"]}]}]}]}';
-	var jsonData = JSON.parse(text);
-	loadData(jsonData);
 }
