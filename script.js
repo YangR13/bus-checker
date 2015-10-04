@@ -12,6 +12,14 @@ function addBusStop(busStopString) {
 	var busDirectionName1 = 'Direction A';
 	var busDirectionName2 = 'Direction B';
 	
+	var stopIndex = busStopString.indexOf("stop:")+6;
+	var routeIndicies;
+	var timeIndicies;
+	
+	
+	busStopName = busStopString.substr();
+	
+	
 	var busLineString;
 	
 	// parse busLineString here
