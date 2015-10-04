@@ -1,0 +1,1 @@
+ssh -i BusCheckerKeyPair.pem ubuntu@ec2-52-26-249-227.us-west-2.compute.amazonaws.com
